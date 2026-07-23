@@ -1,0 +1,8 @@
+.venv/
+.vscode/
+.env
+__pycache__/
+*.sqlite3
+
+# FLAW 2.2 - FIX
+# config.py

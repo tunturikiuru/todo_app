@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>
+        <h2>Create</h2>
+        <form method="post">
+            <!-- FLAW 5 - FIX -->
+            <!-- {% csrf_token %} -->
+            <label for="event_text"><b>Event</b></label>
+            <input type="text" name="event_text" required>
+            <br>
+            <label for="important"><b>Important</b></label>
+            <input type="checkbox" name="important">
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>
+      New features comin soon !!!
+    </p>
+    <p>
+      <form method="post">
+        <!-- FLAW 5 - FIX -->
+        <!-- {% csrf_token %} -->
+        <button>Button not yet working</button>
+      </form>
+    </p>
+    <p>
+            <a href="{% url 'index' %}">Back</a>
+    </p>
+    {% if messages %}
+        {% for message in messages %}
+          <script>
+            alert("{{ message|escapejs }}")
+          </script>
+        {% endfor %}
+    {% endif %}
+  </body>
+</html>
+
+
